@@ -31,7 +31,7 @@ function s.ffilter(c,fc,sumtype,tp)
 	return c:IsRace(RACE_DRAGON,fc,sumtype,tp) and c:IsType(TYPE_FUSION)
 end
 function s.contactfil(tp)
-	return Duel.GetMatchingGroup(Card.IsAbleToRemoveAsCost,tp,LOCATION_MZONE,0,nil)
+	return Duel.GetMatchingGroup(Card.IsAbleToGraveAsCost,tp,LOCATION_ONFIELD,0,nil)
 end
 function s.contactop(g)
 	Duel.SendtoGrave(g,REASON_COST+REASON_MATERIAL)
